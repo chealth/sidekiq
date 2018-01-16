@@ -102,6 +102,7 @@ module Sidekiq
         client_push(item)
       end
       alias_method :perform_at, :perform_in
+      alias_method :delay, :perform_async
 
       ##
       # Allows customization for this type of Worker.
